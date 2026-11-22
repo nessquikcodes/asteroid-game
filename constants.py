@@ -9,7 +9,9 @@ PLAYER_RADIUS = 20      # player's ship
 LINE_WIDTH = 2          # lines drawing ship
 PLAYER_TURN_SPEED = 300
 PLAYER_SPEED = 200
-
+SHOT_RADIUS = 5
+PLAYER_SHOOT_SPEED = 500
+PLAYER_SHOOT_COOLDOWN_SECONDS = 0.3
 
 """Asteroid constants"""
 
