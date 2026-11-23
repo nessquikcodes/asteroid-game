@@ -3,7 +3,7 @@ import random
 import pygame
 
 import circleshape
-from constants import ASTEROID_MIN_RADIUS, LINE_WIDTH
+from constants import ASTEROID_MIN_RADIUS, LINE_WIDTH, ASTEROID_SPLIT_SPEEDUP
 from logger import log_event
 
 
@@ -30,8 +30,8 @@ class Asteroid(circleshape.CircleShape):
         asteroid1 = Asteroid(self.position.x, self.position.y, new_radius)
         asteroid2 = Asteroid(self.position.x, self.position.y, new_radius)
 
-        scaled_velocity1 = movement1 * 1.2
-        scaled_velocity2 = movement2 * 1.2
+        scaled_velocity1 = movement1 * ASTEROID_SPLIT_SPEEDUP
+        scaled_velocity2 = movement2 * ASTEROID_SPLIT_SPEEDUP
 
         asteroid1.velocity = scaled_velocity1
         asteroid2.velocity = scaled_velocity2
